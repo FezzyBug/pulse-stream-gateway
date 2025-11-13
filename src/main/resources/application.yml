@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: pulse-stream-gateway
+server:
+  port: 8081
+logging:
+  level:
+    root: INFO
+    io.hookline.pulse: INFO
