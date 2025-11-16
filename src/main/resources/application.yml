@@ -7,3 +7,11 @@ logging:
   level:
     root: INFO
     io.hookline.pulse: INFO
+  pattern:
+    level: "%5p [txn:%X{transactionId}]"
+
+hookline:
+  services:
+    profile-directory: ${PROFILE_DIRECTORY_URL:http://localhost:8082}
+    settlement-engine: ${SETTLEMENT_ENGINE_URL:http://localhost:8083}
+    resource-telemetry: ${RESOURCE_TELEMETRY_URL:http://localhost:8084}
